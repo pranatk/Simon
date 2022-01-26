@@ -28,6 +28,7 @@ $(document).on("touchstart",function(){
 }
 },false);
 $("button").on("touchstart",function(event){
+  console.log(event.touches.target);
   var buttonClicked= event.touches.target.id;
   userClickedPattern.push(buttonClicked);
 
