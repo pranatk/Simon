@@ -19,14 +19,16 @@ $("button").on("click",function(event){
   animatePress(buttonClicked);
   checkAnswer(userClickedPattern.length);
 });
-
-$(document).on("tap",function(){
+$documen.ready(function(){
+  $(document).on("tap",function(){
   if(started==false){
   started=true;
   nextSequence();
 
 }
 });
+});
+
 $("button").on("tap",function(event){
   console.log(event.target);
   var buttonClicked= event.target.id;
