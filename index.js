@@ -28,8 +28,8 @@ $(document).on("tap",function(){
 }
 });
 $("button").on("tap",function(event){
-  console.log(event.touches.target);
-  var buttonClicked= event.touches.target.id;
+  console.log(event.target);
+  var buttonClicked= event.target.id;
   userClickedPattern.push(buttonClicked);
 
   playSound(buttonClicked);
