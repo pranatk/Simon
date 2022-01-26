@@ -42,7 +42,7 @@ h1{
 @media(max-device-width:768px) {
   h1{
     margin: 40% 10% 25%;
-    color: #fff;
+    color: #FEF2BF;
     font-size: 2rem;
     font-family: 'Press Start 2P', cursive;
   }
