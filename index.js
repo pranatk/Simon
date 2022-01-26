@@ -20,14 +20,14 @@ $("button").on("click",function(event){
   checkAnswer(userClickedPattern.length);
 });
 
-$(document).on("touchend",function(){
+$(document).on("tap",function(){
   if(started==false){
   started=true;
   nextSequence();
 
 }
-},false);
-$("button").on("touchend",function(event){
+});
+$("button").on("tap",function(event){
   console.log(event.touches.target);
   var buttonClicked= event.touches.target.id;
   userClickedPattern.push(buttonClicked);
@@ -35,7 +35,7 @@ $("button").on("touchend",function(event){
   playSound(buttonClicked);
   animatePress(buttonClicked);
   checkAnswer(userClickedPattern.length);
-},false);
+});
 function checkAnswer(currLevel){
   if(userClickedPattern[currLevel-1]==gamePattern[currLevel-1]){
     if(userClickedPattern.length==gamePattern.length){
