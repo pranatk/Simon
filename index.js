@@ -20,21 +20,21 @@ $("button").on("click",function(event){
   checkAnswer(userClickedPattern.length);
 });
 
-$(document).on("touchstart",function(){
+$(document).on("touchend",function(){
   if(started==false){
   started=true;
   nextSequence();
 
 }
-});
-$("button").on("touchstart",function(event){
+},false);
+$("button").on("touchend",function(event){
   var buttonClicked= event.target.id;
   userClickedPattern.push(buttonClicked);
 
   playSound(buttonClicked);
   animatePress(buttonClicked);
   checkAnswer(userClickedPattern.length);
-});
+},false);
 function checkAnswer(currLevel){
   if(userClickedPattern[currLevel-1]==gamePattern[currLevel-1]){
     if(userClickedPattern.length==gamePattern.length){
