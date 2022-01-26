@@ -20,14 +20,14 @@ $("button").on("click",function(event){
   checkAnswer(userClickedPattern.length);
 });
 
-$(document).on("touchstart",function(){
+$(document).on("touchend",function(){
   if(started==false){
   started=true;
   nextSequence();
 
 }
 },false);
-$("button").on("touchstart",function(event){
+$("button").on("touchend",function(event){
   console.log(event.touches.target);
   var buttonClicked= event.touches.target.id;
   userClickedPattern.push(buttonClicked);
