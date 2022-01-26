@@ -19,7 +19,7 @@ $("button").on("click",function(event){
   animatePress(buttonClicked);
   checkAnswer(userClickedPattern.length);
 });
-$documen.ready(function(){
+$document.ready(function(){
   $(document).on("tap",function(){
   if(started==false){
   started=true;
