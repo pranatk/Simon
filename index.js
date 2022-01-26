@@ -20,15 +20,15 @@ $("button").on("click",function(event){
   checkAnswer(userClickedPattern.length);
 });
 
-$(document).on("touchend",function(){
+$(document).on("touchstart",function(){
   if(started==false){
   started=true;
   nextSequence();
 
 }
 },false);
-$("button").on("touchend",function(event){
-  var buttonClicked= event.target.id;
+$("button").on("touchstart",function(event){
+  var buttonClicked= event.touches.target.id;
   userClickedPattern.push(buttonClicked);
 
   playSound(buttonClicked);
