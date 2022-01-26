@@ -18,7 +18,22 @@ $("button").on("click",function(event){
   animatePress(buttonClicked);
   checkAnswer(userClickedPattern.length);
 });
+document.addEventListener("touchstart",function(){
+  if(started==false){
+  started=true;
+  nextSequence();
+}
+}
+);
+document.getElementById.("button").addEventListener("touchstart",function()
+{
+  var buttonClicked= event.target.id;
+  userClickedPattern.push(buttonClicked);
 
+  playSound(buttonClicked);
+  animatePress(buttonClicked);
+  checkAnswer(userClickedPattern.length);
+});
 
 function checkAnswer(currLevel){
   if(userClickedPattern[currLevel-1]==gamePattern[currLevel-1]){
