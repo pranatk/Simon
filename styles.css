@@ -1,12 +1,16 @@
+
 body{
   background-color: #011F3F;
   text-align: center;
 }
-h1{
+.big{
   margin: 5% auto;
   color: #FEF2BF;
   font-size: 3rem;
   font-family: 'Press Start 2P', cursive;
+}
+.small{
+  display:none;
 }
 .div-1,.div-2{
   margin-bottom: 3%;
@@ -40,7 +44,7 @@ h1{
   background-color: red;
 }
 @media(max-device-width:768px) {
-  h1{
+  .small{
     margin: 40% 10% 25%;
     color: #FEF2BF;
     font-size: 2rem;
@@ -52,5 +56,8 @@ h1{
     border: 10px solid black;
     border-radius: 20%;
     margin: auto 2%;
+  }
+  .big{
+    display:none;
   }
 }
